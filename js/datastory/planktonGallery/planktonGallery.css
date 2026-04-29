@@ -12,6 +12,9 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paragraph-title {
@@ -65,7 +68,7 @@
   margin-top: 16px;
   position: relative;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   /* Make overall grid more square - 5 columns, 3 rows */

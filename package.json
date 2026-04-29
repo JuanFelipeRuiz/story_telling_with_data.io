@@ -1,0 +1,35 @@
+{
+  "name": "str-dashboard",
+  "version": "1.0.0",
+  "description": "STR-Dashboard - D3.js data visualization application for biotomic and meteorological data",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "serve": "npx http-server . -p 8080",
+    "dev": "npx http-server . -p 8080 -o -c-1"
+  },
+  "keywords": [
+    "d3.js",
+    "data-visualization",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

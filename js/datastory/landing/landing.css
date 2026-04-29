@@ -1,0 +1,91 @@
+/* Landing/Hero Section Styles */
+
+.landing-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(170deg, #1a3a4a 0%, #12293b 50%, #0a1e2e 100%);
+}
+
+.landing-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 16px 0;
+  position: relative;
+}
+
+.landing-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 28px 0;
+  position: relative;
+  line-height: 1.1;
+}
+
+.landing-scroll-prompt {
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin: 0;
+  font-style: italic;
+  opacity: 0.6;
+  position: relative;
+}
+
+/* Fade appears at the TOP of the first story section, not the bottom of the landing.
+   Scrolling down feels like surfacing — the dark recedes above you. */
+.story-block--first::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background: linear-gradient(to bottom, #12293b 0%, #f4f6f7 80%, #ffffff 100%);
+  margin-bottom: 0;
+}
+
+/* Floating plankton background */
+/* mix-blend-mode: screen makes black pixels transparent on a dark background */
+.landing-plankton {
+  position: absolute;
+  opacity: 0.55;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: plankton-drift ease-in-out infinite alternate;
+}
+
+@keyframes plankton-drift {
+  0%   { transform: translateY(0px)   rotate(0deg); }
+  50%  { transform: translateY(-14px) rotate(4deg); }
+  100% { transform: translateY(4px)   rotate(-3deg); }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid rgba(255,255,255,0.5);
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  transform: rotate(45deg);
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+

@@ -1,0 +1,24 @@
+.magnification-scale-image {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.magnification-scale-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.magnification-legend {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.magnification-legend span {
+  font-weight: 700;
+}
+

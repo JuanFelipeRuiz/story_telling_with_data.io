@@ -1,0 +1,73 @@
+/* =========================
+   Reset & Base Layout
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+
+/* =========================
+  Links
+  ========================= */
+a {
+  color: #0e3da3;
+  text-decoration: none;
+}
+
+/* =========================
+   Shared Datastory Component Styles
+   ========================= */
+
+[data-visual="magnification-comparison"].story-visual,
+[data-visual="plankton-slider"].story-visual {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+[data-visual="magnification-comparison"].story-visual {
+  margin: 5px 0 !important;
+}
+
+[data-visual="plankton-slider"].story-visual {
+  margin: 10px 0 !important;
+}
+
+.datastory-infobox-details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 15px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.datastory-infobox-details:not([open]) {
+  padding: 8px 15px;
+}
+
+.datastory-infobox-details:not([open]) .datastory-infobox-title {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.datastory-infobox-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.datastory-infobox-content {
+  margin-top: 10px;
+  color: var(--text);
+  line-height: 1.55;
+}
+

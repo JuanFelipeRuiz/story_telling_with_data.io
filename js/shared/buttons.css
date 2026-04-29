@@ -1,0 +1,460 @@
+/* =========================================================
+   Unified Button Styles
+   ========================================================= */
+
+/* Base button styles - shared by all buttons */
+.btn-base {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.btn-base:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+.btn-base:active {
+  transform: translateY(1px);
+}
+
+.btn-base:focus {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* Button group container */
+.btn-group {
+  display: inline-flex;
+  gap: 8px;
+}
+
+/* =========================================================
+   Chart Control Buttons (Magnification, Unit, Timespan)
+   ========================================================= */
+
+.chart-magnification-buttons,
+.chart-unit-buttons,
+.chart-timespan-buttons {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.chart-magnification-btn,
+.chart-unit-btn,
+.chart-timespan-btn {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.chart-magnification-btn:hover,
+.chart-unit-btn:hover,
+.chart-timespan-btn:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+/* Active state - unified style for all chart control buttons */
+.chart-magnification-btn.active,
+.chart-unit-btn.active,
+.chart-timespan-btn.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+/* =========================================================
+   Timeline Control Buttons (scoped to timeline container)
+   ========================================================= */
+
+.timeline-magnification-buttons,
+.timeline-unit-buttons {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.timeline-magnification-btn,
+.timeline-unit-btn {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #d5d8de;
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.timeline-magnification-btn:hover,
+.timeline-unit-btn:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+.timeline-magnification-btn.active,
+.timeline-unit-btn.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+[data-visual="plankton-timeline"] .timeline-magnification-buttons,
+[data-visual="plankton-timeline"] .timeline-unit-buttons {
+  display: inline-flex;
+  gap: 8px;
+}
+
+[data-visual="plankton-timeline"] .timeline-magnification-btn,
+[data-visual="plankton-timeline"] .timeline-unit-btn {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #d5d8de;
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+[data-visual="plankton-timeline"] .timeline-magnification-btn:hover,
+[data-visual="plankton-timeline"] .timeline-unit-btn:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+[data-visual="plankton-timeline"] .timeline-magnification-btn.active,
+[data-visual="plankton-timeline"] .timeline-unit-btn.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+/* =========================================================
+   Sidebar Buttons
+   ========================================================= */
+
+/* Sidebar toggle button (half-circle at left border) */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1001;
+  width: 40px;
+  height: 80px;
+  border-radius: 0 40px 40px 0; /* Half circle: right side rounded */
+  border: 2px solid var(--border);
+  border-left: none; /* No border on the flat edge */
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  padding: 0;
+  padding-left: 4px; /* Small padding to move content from edge */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide button when sidebar is open (CSS-native) */
+body[data-sidebar-open] .sidebar-toggle-btn,
+.sidebar-toggle-btn.hidden,
+.sidebar-toggle-btn.active {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sidebar-toggle-btn:hover {
+  background: var(--gray-hover);
+  border-color: var(--gray-hover);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) translateX(2px);
+}
+
+/* Text inside button - positioned near border */
+.sidebar-toggle-btn .toggle-text {
+  font-size: 10px;
+  font-weight: 600;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  line-height: 1.2;
+  margin-bottom: 2px;
+  margin-left: 2px; /* Closer to border */
+}
+
+.sidebar-toggle-btn .toggle-arrow {
+  font-size: 12px;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  line-height: 1;
+  margin-left: 2px; /* Closer to border */
+}
+
+/* When sidebar is open, rotate arrow */
+.filters-sidebar.open ~ .container .sidebar-toggle-btn .toggle-arrow,
+.sidebar-toggle-btn.active .toggle-arrow {
+  transform: rotate(0deg);
+}
+
+/* Sidebar close button */
+.sidebar-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-close-btn:hover {
+  background: var(--gray-hover);
+  border-color: var(--gray-hover);
+}
+
+/* =========================================================
+   Update Plots Button
+   ========================================================= */
+
+.update-plots-btn {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--text);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.update-plots-btn:hover {
+  background: var(--text);
+  opacity: 0.9;
+  border-color: var(--text);
+}
+
+.update-plots-btn:active {
+  opacity: 0.8;
+}
+
+.update-plots-btn .update-icon {
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.update-plots-btn.updating .update-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   Generic Buttons
+   ========================================================= */
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+
+/* =========================================================
+   Select2 Clear Button
+   ========================================================= */
+
+.select2-clear-btn {
+  display: block;
+  margin-top: 6px;
+  margin-left: 0;
+  padding: 4px 10px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select2-clear-btn:hover {
+  background: var(--gray-hover);
+  border-color: var(--gray-hover);
+}
+
+/* =========================================================
+   Warning Panel Close Button
+   ========================================================= */
+
+.warning-panel-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.warning-panel-close:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+/* =========================================================
+   Landing Page Button
+   ========================================================= */
+
+.landing-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--brand);
+  background: var(--brand);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.landing-btn:hover {
+  background: var(--text);
+  border-color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.landing-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   Dashboard Link Button
+   ========================================================= */
+
+.dashboard-link-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--text);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.dashboard-link-btn:hover {
+  background: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   Modal Close Button (Blaualgen Warning)
+   ========================================================= */
+
+.blaualgen-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.blaualgen-modal-close:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .chart-magnification-btn,
+  .chart-unit-btn,
+  .chart-timespan-btn,
+  .timeline-magnification-btn,
+  .timeline-unit-btn,
+  [data-visual="plankton-timeline"] .timeline-magnification-btn,
+  [data-visual="plankton-timeline"] .timeline-unit-btn {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+}
+

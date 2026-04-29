@@ -1,0 +1,148 @@
+{
+  "planktons": [
+    {
+      "id": "aphanziano",
+      "name": "Aphanizomenon",
+      "type": "phytoplankton",
+      "svgFile": "aphanziano.svg",
+      "description": "Forms long chains of connected cells that drift like tiny threads in the water. These chains, called filaments, can accumulate at the surface during warm and calm periods. Can produce toxins when they bloom.",
+      "size": "5–10 µm wide filaments up to several millimeters long",
+      "organization": "filament"
+    },
+    {
+      "id": "asterionella_colony",
+      "name": "Asterionella",
+      "type": "phytoplankton",
+      "svgFile": "asterionella_colony.svg",
+      "description": "A type of diatom, meaning a microscopic alga with a shell made of silica, a glass like material. The cells often form star shaped colonies that appear during spring blooms, where they produce oxygen and provide food for small animals in the plankton.",
+      "size": "60–120 µm long cells",
+      "organization": "colony"
+    },
+    {
+      "id": "bosmina",
+      "name": "Bosmina",
+      "type": "zooplankton",
+      "svgFile": "bosmina.svg",
+      "description": "A tiny crustacean, a small animal with a hard outer shell and jointed legs, also known as a water flea. Filters small algae and particles from the water and is an important food source for young fish and larger plankton.",
+      "size": "0.3–0.8 mm",
+      "organization": "individual"
+    },
+    {
+      "id": "cillate",
+      "name": "Ciliate",
+      "type": "zooplankton",
+      "svgFile": "cillate.svg",
+      "description": "A single celled organism covered with cilia, which are hair like structures that beat in waves to move and capture food. Feeds on bacteria and very small algae and forms a connection between microbes and larger plankton.",
+      "size": "20–200 µm",
+      "organization": "single cell"
+    },
+    {
+      "id": "cryptomonas_cryptophyceae",
+      "name": "Cryptomonas",
+      "type": "phytoplankton",
+      "svgFile": "cryptomonas_cryptophyceae.svg",
+      "description": "A single celled alga that swims using two flagella, thin whip like structures that work like tiny propellers. Grows well in low light and is highly nutritious for zooplankton, which makes it important for the transfer of energy in the food web.",
+      "size": "15–50 µm",
+      "organization": "single cell"
+    },
+    {
+      "id": "cyanobakteria",
+      "name": "Cyanobacteria (Filamentous)",
+      "type": "phytoplankton",
+      "svgFile": "cyanobakteria.svg",
+      "description": "Chains of cells that form long filaments capable of rising to the surface and creating dense blooms. Many groups can produce toxins and can also fix nitrogen, a process that allows them to use nitrogen gas from the air as a nutrient when dissolved nutrients are low.",
+      "size": "3–10 µm wide filaments of variable length",
+      "organization": "filament"
+    },
+    {
+      "id": "cyanobakteria_colonial_clathrate",
+      "name": "Colonial Cyanobacteria",
+      "type": "phytoplankton",
+      "svgFile": "cyanobakteria_colonial_clathrate.svg",
+      "description": "Dense clusters of many cells embedded in a gelatinous, jelly like matrix. Often appear as bright blue green clumps near the surface. Several groups can produce toxins during bloom events and are therefore closely watched in monitoring programs.",
+      "size": "50–500 µm colonies",
+      "organization": "colony"
+    },
+    {
+      "id": "daphnia",
+      "name": "Daphnia",
+      "type": "zooplankton",
+      "svgFile": "daphnia.svg",
+      "description": "A transparent water flea and small crustacean whose heartbeat can be seen under the microscope. Filters algae and suspended particles from the water and reacts quickly to changes in temperature and food, so shifts in its numbers tell researchers how the environment is changing. Also a major food source for fish.",
+      "size": "0.5–5 mm",
+      "organization": "individual"
+    },
+    {
+      "id": "dinobryon",
+      "name": "Dinobryon",
+      "type": "phytoplankton",
+      "svgFile": "dinobryon.svg",
+      "description": "Forms colonies in which each cell sits in a small vase shaped case. Uses a mixotrophic strategy, meaning it can both photosynthesize and take up organic particles as food. This flexible mode of feeding supports growth during variable conditions in early spring.",
+      "size": "15–30 µm cells, colonies up to 200 µm",
+      "organization": "colony"
+    },
+    {
+      "id": "eudiaptomus",
+      "name": "Eudiaptomus",
+      "type": "zooplankton",
+      "svgFile": "eudiaptomus.svg",
+      "description": "A copepod, which is a shrimp like planktonic crustacean with long antennae used for swimming. Feeds on algae and tiny particles and is an important food source for young fish. Changes in its abundance over the year offer clues about how the lake responds to physical and chemical shifts.",
+      "size": "1–2 mm",
+      "organization": "individual"
+    },
+    {
+      "id": "fragilara",
+      "name": "Fragilaria",
+      "type": "phytoplankton",
+      "svgFile": "fragilara.svg",
+      "description": "A chain forming diatom whose rectangular cells have silica walls, meaning they are enclosed in a shell made from a glass like material. The cells link into long ribbons that often dominate spring blooms and provide oxygen and food for early season zooplankton.",
+      "size": "5–15 µm wide, 20–100 µm long chains",
+      "organization": "filament"
+    },
+    {
+      "id": "kartella_quadrata",
+      "name": "Keratella quadrata",
+      "type": "zooplankton",
+      "svgFile": "kartella_quadrata.svg",
+      "description": "A rotifer, a tiny animal that often has a rotating band of cilia at the front that pulls water and food toward the mouth. The body is enclosed in a lorica, a protective outer shell. Feeds on small algae and particles and is eaten by larger plankton.",
+      "size": "100–200 µm",
+      "organization": "individual"
+    },
+    {
+      "id": "leptodora_kindtii",
+      "name": "Leptodora kindtii",
+      "type": "zooplankton",
+      "svgFile": "Leptodora_kindtii.svg",
+      "description": "A large, almost transparent predatory crustacean with long grasping limbs. Hunts smaller zooplankton such as water fleas and copepod larvae in open water. Its size and feeding behavior make it one of the top predators in the plankton community.",
+      "size": "10–18 mm",
+      "organization": "individual"
+    },
+    {
+      "id": "pandorina",
+      "name": "Pandorina",
+      "type": "phytoplankton",
+      "svgFile": "pandorina.svg",
+      "description": "A spherical colony of 8 to 32 cells. Each cell has flagella, thin whip like structures that beat in synchrony so the entire colony moves as a coordinated group. Contributes to primary production and is consumed by many small grazing animals.",
+      "size": "50–100 µm colonies",
+      "organization": "colony"
+    },
+    {
+      "id": "pediastrum",
+      "name": "Pediastrum",
+      "type": "phytoplankton",
+      "svgFile": "pediastrum.svg",
+      "description": "A flat, star shaped colony composed of many green algal cells arranged in a circular pattern. Often found in nutrient rich water and readily eaten by grazing zooplankton. The striking geometry makes it easy to recognize in images.",
+      "size": "50–200 µm colonies",
+      "organization": "colony"
+    },
+    {
+      "id": "tetraedron",
+      "name": "Tetraedron",
+      "type": "phytoplankton",
+      "svgFile": "tettraedron.svg",
+      "description": "Made of green algal cells shaped like tiny pyramids. Appears as single cells or small clusters and contributes to primary production in the plankton. The compact, angular form stands out in microscope views.",
+      "size": "10–50 µm cells",
+      "organization": "single cell"
+    }
+  ]
+}

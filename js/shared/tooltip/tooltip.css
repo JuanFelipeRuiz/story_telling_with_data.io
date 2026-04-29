@@ -1,0 +1,25 @@
+/* Unified Tooltip Styles */
+.plot-tooltip {
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.plot-tooltip-bg {
+  fill: rgba(0, 0, 0, 0.8);
+  stroke: none;
+  rx: 4;
+  ry: 4;
+}
+
+.plot-tooltip-text {
+  fill: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-anchor: start;
+}
+
+.plot-tooltip-text tspan {
+  dominant-baseline: text-before-edge;
+}
+
+

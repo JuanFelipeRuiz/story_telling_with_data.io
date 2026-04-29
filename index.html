@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AQUASCOPE – Still water is not still</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="js/shared/styles/variables.css">
+  <link rel="stylesheet" href="js/shared/base/base.css">
+  <link rel="stylesheet" href="js/shared/mainLayout/mainLayout.css">
+  <link rel="stylesheet" href="js/shared/tooltip/tooltip.css">
+  <link rel="stylesheet" href="js/shared/index/index.css">
+  <link rel="stylesheet" href="js/shared/buttons.css">
+  <link rel="stylesheet" href="js/datastory/landing/landing.css">
+  <link rel="stylesheet" href="js/datastory/storySections/storySections.css">
+  <link rel="stylesheet" href="js/datastory/navigationBar/navigationBar.css">
+  <link rel="stylesheet" href="js/datastory/planktonGallery/planktonGallery.css">
+  <link rel="stylesheet" href="js/datastory/blaualgenWarning/blaualgenWarning.css">
+  <link rel="stylesheet" href="js/datastory/planktonTimeline/planktonTimeline.css">
+  <link rel="stylesheet" href="js/datastory/planktonSlider/planktonSlider.css">
+  <link rel="stylesheet" href="js/datastory/magnification/magnification.css">
+</head>
+
+<body>
+  <section id="landing" class="landing-section">
+    <img class="landing-plankton" src="images/svg_planktons/daphnia.svg"               style="top:14%;  left:7%;   width:88px;  animation-duration:7s;   animation-delay:0s;">
+    <img class="landing-plankton" src="images/svg_planktons/asterionella_colony.svg"   style="top:22%;  right:9%;  width:72px;  animation-duration:9.5s; animation-delay:1.5s;">
+    <img class="landing-plankton" src="images/svg_planktons/cyanobakteria.svg"         style="bottom:28%;left:11%; width:58px;  animation-duration:8s;   animation-delay:0.8s;">
+    <img class="landing-plankton" src="images/svg_planktons/dinobryon.svg"             style="top:9%;   right:22%; width:54px;  animation-duration:11s;  animation-delay:2.2s;">
+    <img class="landing-plankton" src="images/svg_planktons/fragilara.svg"             style="bottom:18%;right:7%; width:80px;  animation-duration:6.5s; animation-delay:0.5s;">
+    <img class="landing-plankton" src="images/svg_planktons/pandorina.svg"             style="top:62%;  left:5%;   width:50px;  animation-duration:10s;  animation-delay:1.2s;">
+    <img class="landing-plankton" src="images/svg_planktons/pediastrum.svg"            style="bottom:14%;left:33%; width:64px;  animation-duration:12s;  animation-delay:1.8s;">
+    <img class="landing-plankton" src="images/svg_planktons/bosmina.svg"               style="top:7%;   left:28%;  width:44px;  animation-duration:8.5s; animation-delay:3s;">
+
+    <p class="landing-label">AQUASCOPE</p>
+    <h1 class="landing-title">Still water is not still</h1>
+    <p class="landing-scroll-prompt">Making the invisible life in still water visible.</p>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <div id="what-is" class="story-block story-block--first">
+    <div class="story-content">
+      <p>The surface of a lake can appear completely calm and silent. Yet under the water and the right conditions, something invisible can shift.
+        Certain microscopic organisms multiply rapidly and rise to the surface, forming a visible greenish film or mat across the water.
+        These blooms can be toxic to animals and humans alike, making the lake unsafe for swimming.</p>
+      
+      <div class="story-visual" data-visual="blaualgen-warning">
+        <div class="blaualgen-image-pair">
+          <div class="blaualgen-figure blaualgen-figure--sign">
+            <img class="blaualgen-image blaualgen-image--sign" src="images/warnung_Blaualgen-Greifensee.jpg" alt="Blue-green algae warning at Lake Greifensee" title="Click to zoom into the sign" onclick="toggleBlaualgenImage()">
+            <span class="blaualgen-credit">@Stadtpolizei Uster</span>
+          </div>
+          <div class="blaualgen-figure">
+            <img class="blaualgen-image" src="images/algue_bloom.png" alt="Algae bloom at Lake Greifensee">
+            <span class="blaualgen-credit">@Eawag, Francesco Pomati</span>
+          </div>
+        </div>
+        <p class="blaualgen-caption">Warning sign (click to enlarge) and algae bloom at Lake Greifensee.</p>
+      </div>
+      <p>At the same time, the organisms responsible for these warnings are not merely a hazard. They are the very foundation on which the entire lake ecosystem depends.</p>
+    </div>
+  </div>
+
+  <div id="small-organisms" class="story-block">
+    <div class="story-content">
+      <h2>Small organisms, large influence</h2>
+      <p>
+        Those blooms are visible from the shore. But the individual organisms that cause them are not. Beneath the surface,
+        countless microscopic life forms drift through the water column, so small that they are almost invisible to the naked eye. These drifting organisms are plankton.
+      </p>
+      <p>
+        Phytoplankton are mostly single-celled, photosynthetic organisms that use sunlight and carbon dioxide to produce energy. 
+        In doing so, they generate oxygen and form the base of the aquatic food web.
+
+        Zooplankton feed on phytoplankton, grazing on algae and regulating their population growth. In this way, they connect microscopic plant life
+        to larger organisms in the lake such as fish.
+      </p>
+      <p>
+        Among the phytoplankton are cyanobacteria, the organisms behind that warning sign.
+        These blooms not only restrict human use of the lake, but can also disrupt the ecosystem itself.
+        Surface accumulations reduce light penetration, limiting photosynthesis in other phytoplankton. 
+        When a bloom collapses, the decomposition of the cells increases oxygen demand and can lower oxygen levels in the water, potentially shifting the balance of the entire lake ecosystem.
+      </p>
+
+      <h3 class="paragraph-title">Explore the plankton of Greifensee</h3>
+      <p>Plankton display a striking variety of shapes, structures, and colors, each adapted to life in the water column. 
+        The images below show a selection of plankton species observed in Lake Greifensee. Click on an organism to learn
+        more about it and its role in the ecosystem. For further images, visit <a href="https://aquascope.ch/discover-plankton/">Aquascope Discover Plankton</a>.
+      </p>
+      <div class="story-visual" data-visual="plankton-filter">
+        <div class="plankton-filter-container">
+          <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="phytoplankton">Phytoplankton</button>
+              <button class="filter-btn" data-filter="zooplankton">Zooplankton</button>
+              <button class="filter-btn" data-filter="blue-algae">Blue Algae</button>
+          </div>
+          <div class="plankton-gallery" id="plankton-gallery">
+          </div>
+        </div>
+      </div>
+      <p>As can be seen, the shapes range from star-like organisms to small shrimp-like ones. Individual phytoplankton are invisible without a microscope. Some zooplankton can reach several millimeters and are just visible to the naked eye, though they are easily overlooked in open water.
+        So how do we know which ones are present at any given time? How can we observe them systematically over time in their natural environment?</p>
+    </div>
+  </div>
+
+  
+  <div id="lake-greifen" class="story-block">
+    <div class="story-content">
+      <h2>Making the small ones measurable</h2>
+      <p>To observe the plankton community systematically, an underwater microscope was installed at the Greifensee three meters below the lake surface. 
+        The device records image sequences at regular intervals, capturing organisms directly in their natural environment. 
+        This system is part of the research project Aquascope from Eawag, which enables continuous monitoring of the plankton community.
+      </p>
+      <h3 class="paragraph-title">Microscope magnification</h3>
+
+        <p>
+          The microscope operates at two magnifications to cover small and large organisms, opening two windows into the water column at different scales.
+          One can imagine this process like taking a photo of a flock of birds flying across the sky. Depending on the magnification level,
+          one may either see a single bird in great detail or a larger flock with less detail on each individual. The image below illustrates the observed
+          plankton with 0.5× (blue) and 5× (orange) magnification.
+        </p>
+    
+          <div class="magnification-scale-image">
+            <img src="images/scale.png" alt="Magnification scale comparison">
+          </div>
+
+          <p>
+          At low magnification (blue), larger organisms such as zooplankton and larvae are captured across a wide field of view. At high magnification (orange),
+          microscopic organisms such as single cells and small colonies become visible in much finer detail, although within a smaller observed area. Together,
+          these complementary views provide a more complete picture of the plankton community. 
+        </p>
+    
+         
+        <h3 class="paragraph-title">From image to data point</h3>
+
+
+
+        <p>
+          Each magnification captures images at regular intervals. Within each image, individual plankton organisms or colonies are detected automatically.
+          Over time, these individual snapshots accumulate into a time series. In the example below, one can see the original picture taken by the microscope
+          and all detected organisms. These are then counted and classified to create the time series. As a unit, scientists use "Regions of Interest" (ROIs)
+          over the observed time. Use the time slider below to step through individual images to see how the count depends on the sampling time.
+        
+        </p>
+
+    
+        <div data-visual="plankton-slider">
+        <div class="plankton-content">
+
+          <div class="plankton-image-section">
+            <div class="plankton-image-title"></div>
+            <img class="plankton-image" src="" alt="">
+          </div>
+
+          <div class="plankton-stats"></div>
+
+        </div>
+
+        <div class="plankton-controls">
+          <label for="interval-slider">Each position shows a single image taken at that point in time:</label>
+
+          <div class="interval-slider-wrapper">
+            <input id="interval-slider" type="range" min="0" max="4" value="0" step="1">
+
+          <div class="interval-labels">
+            <span data-index="0" style="left:0%">after 1 sec</span>
+            <span data-index="1" style="left:25%">after 1 min</span>
+            <span data-index="2" style="left:50%">after 1 hour</span>
+            <span data-index="3" style="left:75%">after 12 hours</span>
+            <span data-index="4" style="left:100%">after 1 day</span>
+          </div>
+          </div>
+
+        </div>
+        </div>
+
+    </div>
+  </div>
+
+
+  <div id="how-observes" class="story-block">
+    <div class="story-content">
+      <h2>The resulting timeline</h2>
+      <p>
+        All the observations are then aggregated into a time series, as a single detection is insufficient on its own. Thousands of them, accumulated over months, begin to reveal more about
+        the ecosystem of the lake. The timeline below shows the concentration of cyanobacteria over a one-year period.
+        One can see clear seasonal patterns, with concentrations rising in the warmer months and falling back in winter.
+        The data show continuous biological activity beneath the surface.
+      </p>
+      <div class="story-visual" data-visual="plankton-timeline">
+        <div class="timeline-svg-container"></div>
+      </div>
+      <p>In the timeline above, selecting cyanobacteria at both magnifications shows how differently the same organism appears at each scale. The samples shown are only a small part of the overall dataset, yet they illustrate how continuous monitoring can track the dynamics of plankton populations.</p>
+    </div>
+  </div>
+
+  <div id="future" class="story-block">
+    <div class="story-content">
+      <h2>A look into the ecosystem of a lake</h2>
+      <p>Since 2018, Project Aquascope has continuously recorded plankton images at Greifensee, day and night. Since 2022, the same system runs at Lake Zug. Local sensors measuring water temperature, light, and nutrient levels add environmental context. Together, these records from multiple sites give scientists what snapshots cannot: a continuous view of life beneath the surface, driving ongoing research (<a href="https://aquascope.ch/publications/" target="_blank" rel="noopener">see publications</a>) into how lake ecosystems work. So even if the water appears still, the plankton community is not.</p>
+    </div>
+  </div>
+
+  <div class="story-block story-block--sources">
+    <div class="story-content">
+      <div class="story-sources">
+        <h3 class="sources-heading">Sources</h3>
+        <p class="sources-item"><span class="sources-label">Data</span> Dennis, S., Merz, E., Reyes, M., Merkli, S., Baity-Jesi, M., Kyathanahally, S. et al. (2023). <em>Aquascope</em> – Eawag: Swiss Federal Institute of Aquatic Science and Technology. <a href="https://doi.org/10.25678/000BP4" target="_blank" rel="noopener">doi:10.25678/000BP4</a></p>
+        <p class="sources-item">Eyring, S., Reyes, M., Merz, E., Baity-Jesi, M., Ntetsika, P., Ebi, C., Dennis, S. &amp; Pomati, F. (2025). Five years of high-frequency data of phytoplankton, zooplankton and limnology from a temperate eutrophic lake. <em>Scientific Data</em>, 12, 653. <a href="https://doi.org/10.1038/s41597-025-04988-9" target="_blank" rel="noopener">doi:10.1038/s41597-025-04988-9</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/shared/mainLayout/mainLayout.js"></script>
+  <script src="js/datastory/index.js"></script>
+  <script src="js/datastory/planktonGallery/planktonGallery.js"></script>
+  <script src="js/datastory/blaualgenWarning/blaualgenWarning.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimelineConfig.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimelineUtils.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimelineData.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimelineControls.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimelineRenderer.js"></script>
+  <script src="js/datastory/planktonTimeline/planktonTimeline.js"></script>
+  <script src="js/datastory/planktonSlider/planktonSlider.js"></script>
+</body>
+</html>

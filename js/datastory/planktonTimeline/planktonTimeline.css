@@ -1,0 +1,229 @@
+/* ===========================
+   Plankton Timeline
+   =========================== */
+
+[data-visual="plankton-timeline"] {
+  margin: 16px 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.timeline-svg-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 500px;
+  background: var(--gray-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.timeline-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.timeline-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.timeline-controls-row label {
+  font-size: 0.85rem;
+  margin-right: 2px;
+  margin-left: 24px;
+}
+
+.timeline-controls-row label:first-child {
+  margin-left: 0;
+}
+
+.timeline-title {
+}
+
+[data-visual="plankton-timeline"] .timeline-timespan-buttons {
+  display: inline-flex;
+  gap: 8px;
+}
+
+[data-visual="plankton-timeline"] .timeline-timespan-btn {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #d5d8de;
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+[data-visual="plankton-timeline"] .timeline-timespan-btn:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+[data-visual="plankton-timeline"] .timeline-timespan-btn.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+/* Species toggle boxes */
+.timeline-species-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.timeline-species-row-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.timeline-species-row-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.55;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.timeline-bottom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  background: var(--gray-light);
+  border-radius: 6px;
+  margin-top: 2px;
+}
+
+.timeline-bottom-controls label {
+  font-size: 0.85rem;
+  margin-right: 2px;
+  margin-left: 20px;
+}
+
+.timeline-bottom-controls label:first-child {
+  margin-left: 0;
+}
+
+.timeline-species-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-species-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  opacity: 0.4;
+}
+
+.timeline-species-box:hover {
+  opacity: 0.75;
+  border-color: var(--species-color);
+}
+
+.timeline-species-box.active {
+  opacity: 1;
+  border-color: var(--species-color);
+  box-shadow: 0 0 0 1px var(--species-color);
+}
+
+.timeline-species-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--species-color);
+  flex-shrink: 0;
+}
+
+/* Warning panel */
+.timeline-warning-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  max-width: 500px;
+  width: 90%;
+}
+
+.timeline-warning-panel.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.warning-panel-content {
+  padding: 24px;
+  position: relative;
+}
+
+.warning-panel-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.warning-panel-content p {
+  margin: 0 0 12px 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-svg-container {
+    height: 400px;
+    padding: 15px;
+  }
+
+  .timeline-warning-panel {
+    max-width: 90%;
+  }
+}
+

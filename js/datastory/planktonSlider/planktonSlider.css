@@ -1,0 +1,153 @@
+/* Grid layout for image + stats */
+.plankton-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+  background: var(--gray-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.plankton-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plankton-image-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+  background: var(--gray-light);
+  border-radius: 4px;
+  color: var(--text);
+  border: none;
+}
+
+.plankton-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+
+/* Stats */
+.plankton-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--gray-light);
+  padding: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.plankton-stats-title-spacer {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+  background: var(--gray-light);
+  border-radius: 4px;
+  color: var(--text);
+  visibility: hidden;
+  min-height: 56px;
+  line-height: 1.4;
+}
+
+.stat-item {
+  padding: 12px;
+  border-radius: 4px;
+  background: #d5d8de;
+  border: none;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+
+
+/* Slider Controls */
+.plankton-controls {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plankton-controls label {
+  font-weight: 600;
+  color: #111;
+}
+
+.interval-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.interval-slider-wrapper input[type="range"] {
+  width: 100%;
+}
+
+.interval-labels {
+  position: relative;
+  height: 16px;
+  margin-top: 5px;
+  overflow: visible;
+}
+
+.interval-labels span {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #666666;
+  white-space: nowrap;
+}
+
+.interval-labels span.selected {
+  color: #000000;
+}
+
+.interval-labels span:first-child {
+  left: 0;
+}
+
+.interval-labels span:last-child {
+  left: 100%;
+  transform: translateX(-100%); 
+}
+
+.plankton-current-step {
+  font-size: 14px;
+  color: #000000;
+}
+
+.plankton-step-label {
+  font-weight: 700;
+  color: #000000;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plankton-content {
+    grid-template-columns: 1fr;
+  }
+
+}

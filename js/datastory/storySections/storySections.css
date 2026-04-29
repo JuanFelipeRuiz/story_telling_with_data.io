@@ -1,0 +1,144 @@
+/* Story Sections Styles */
+
+.story-section {
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 20px 60px 20px;
+  background: var(--surface);
+}
+
+/* Continuous-flow blocks used after the landing screen */
+.story-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px 20px 4px 20px;
+  background: var(--surface);
+}
+
+/* First block gets extra top padding — gradient transition takes vertical space */
+.story-block--first {
+  padding-top: 32px;
+}
+
+.story-content {
+  max-width: 900px;
+  text-align: left;
+}
+
+.story-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 14px 0;
+  line-height: 1.3;
+}
+
+.story-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  text-align: justify;
+}
+
+/* Reduce spacing after text-map-layout */
+.text-map-layout + div {
+  margin-top: 20px; /* Reduced from default paragraph margin */
+}
+
+/* Left-align text inside two-column layouts — justified text in narrow columns
+   creates uneven word spacing that looks mechanical */
+.text-map-layout p {
+  text-align: left;
+}
+
+.story-content p strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Story Visuals */
+.story-visual {
+  margin: 15px 0;
+  padding: 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: visible; /* Allow content to extend beyond container */
+  position: relative;
+}
+
+/* Neutral styling for plankton filter */
+.story-visual[data-visual="plankton-filter"] {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 40px 0;
+}
+
+/* No card for blaualgen images */
+.story-visual[data-visual="blaualgen-warning"] {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.visual-placeholder,
+.visual-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+/* Sources section */
+.story-block--sources {
+  padding-top: 16px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.story-sources {
+  border-top: none;
+}
+
+.sources-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 8px 0;
+}
+
+.story-content .sources-item {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 4px 0;
+  text-align: left;
+}
+
+.sources-item a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sources-item a:hover {
+  color: var(--text);
+}
+
+.sources-label {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+
+

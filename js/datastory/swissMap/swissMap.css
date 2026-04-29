@@ -1,0 +1,55 @@
+/* Swiss Map Component Styles */
+
+/* Layout for text and map side by side */
+.text-map-layout {
+  display: flex;
+  align-items: flex-start; 
+  gap: 2rem;
+}
+
+/* Equal size for both divs */
+.text-map-layout > div {
+  flex: 1.5; 
+  min-width: 300px;
+  margin: 0;
+}
+
+.text-map-layout > div:first-child p {
+  margin: 0 0 20px 0;
+}
+
+#swiss-map-container {
+  flex: 1.5;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  padding-top: 0;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  position: relative;
+  overflow: visible; 
+  min-height: 200px;
+  align-self: flex-start;
+}
+
+#swiss-map-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1; /* Ensure SVG is above background */
+}
+
+.map-error {
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Lake labels styling */
+#swiss-map-container svg .lake-labels text {
+  pointer-events: none;
+  user-select: none;
+}
+

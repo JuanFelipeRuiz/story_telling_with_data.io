@@ -1,0 +1,102 @@
+/**
+ * Story Navigation - Dot overview styles
+ */
+
+.story-navigation {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.nav-dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.nav-dot-item {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--text, #111827);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  pointer-events: all;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-dot:hover,
+.nav-dot:focus {
+  width: 16px;
+  height: 16px;
+  background: var(--text, #111827);
+  outline: none;
+}
+
+.nav-dot.active {
+  width: 16px;
+  height: 16px;
+  background: var(--text, #111827);
+  border-color: var(--text, #111827);
+}
+
+.nav-dot-tooltip {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text, #111827);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1001;
+}
+
+.nav-dot-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--text, #111827);
+}
+
+.nav-dot:hover .nav-dot-tooltip,
+.nav-dot:focus .nav-dot-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive: hide on small screens */
+@media (max-width: 768px) {
+  .story-navigation {
+    display: none;
+  }
+}
+

@@ -126,7 +126,7 @@
         window.AppConstants.DEFAULT_DATE_RANGE.getEnd() : new Date('2026-03-31T23:59:59Z');
 
       const dataPath = window.AppConstants ?
-        window.AppConstants.getDataPath('aquascope') : '/data/aquascope_0425_0426/';
+        window.AppConstants.getDataPath('aquascope') : 'data/aquascope_0425_0426/';
       const lake = window.AppConstants ?
         window.AppConstants.DEFAULT_LAKE : 'Lake_Greifen';
 

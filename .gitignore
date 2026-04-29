@@ -4,7 +4,6 @@
 **.txt
 
 **/**.jpeg
-*.png
 *.jpeg
 *.tar
 *.tif
@@ -13,7 +12,6 @@
 *xml
 *.tar.bz2
 **/**/**.tif
-*.svg
 *.gz
 .vscode/*
 cursor_docs/
